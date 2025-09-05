@@ -1,0 +1,22 @@
+.logement-page {
+      color: #ff6060;
+      font-family: "Montserrat", sans-serif;
+      font-weight: normal;
+}
+
+.logement-page h1 {
+      font-size: 5rem;
+}
+
+.logement__desc__area {
+      display: flex;
+      gap: 4rem;
+}
+
+/* Mobile */
+@media only screen and (width <= 768px) {
+      .logement__desc__area {
+            flex-direction: column;
+            gap: 0.3rem;
+      }
+}

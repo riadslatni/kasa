@@ -1,0 +1,67 @@
+.collapse__panel {
+  margin-bottom: 1rem;
+  flex-basis: 50%;
+  cursor: pointer;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.collapse__header {
+  background-color: #ff6060;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapse__content {
+  background-color: #d9d7d79c;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  animation: slide-in 0.4s ease-in-out;
+ color:black;
+}
+
+
+
+/* Quand visible */
+.visible.collapse__content {
+  display: block;
+}
+
+.hidden.collapse__content {
+  display: none;
+}
+
+/* Icônes chevron */
+.fa-chevron-down,
+.fa-chevron-up {
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Animation ouverture */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .collapse__panel {
+    margin: 0;
+  }
+}

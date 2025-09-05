@@ -1,0 +1,44 @@
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      gap: 2rem;
+      color: var(--red);
+      font-weight: 400;
+      min-width: 20%;
+      font-style: normal;
+      font-size: 24px;
+      font-family: "Montserrat", sans-serif;
+      margin-left: 82%;
+}
+
+
+
+.navbar a {
+      text-decoration: none;
+      
+      color: black;
+}
+
+
+.navbar a.active {
+      text-decoration: underline;
+       
+}
+
+@media only screen and (width <=768px) {
+      .navbar {
+            width: 130px;
+            padding: 0;
+            margin-right: 17px;
+            gap: 0;
+      }
+
+      .navbar a {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 500;
+            min-width: 3.5rem;
+      }
+}
