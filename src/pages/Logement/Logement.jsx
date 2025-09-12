@@ -1,32 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './logement.css';
 import { Collapse } from '../../components/Collapse/Collapse';
-import datas from '../../data/data.json';
+import datas from '../../Data/Data.json';
+
 import { SlideShow } from '../../components/SlideShow/SlideShow';
-import ApartmentHeader from '../../components/LogementHeader/LogementHeader';
+import ApartmentHeader from '../../components/LogementHEADER/LogementHeader'; // Correction ici
 import { useParams } from 'react-router-dom';
 
-
-
 function Logement() {
+  const idApartment = useParams().id;
 
-  const [image, setImage] = useState([]);
+  console.log('ID reçu:', idApartment);
+  console.log('IDs JSON:', datas.map(d => d.id));
+  const currentApartment = datas.find(data => data.id === idApartment);
 
-  const idApartment = useParams("id").id;
-  const currentApartment = datas.filter(data => data.id === idApartment);
-
-  useEffect(() => {
-		const currentApartment = datas.filter(data => data.id === idApartment);
-		setImage(currentApartment[0].pictures);
-	}, [idApartment]);
+  if (!currentApartment) {
+    return <div>Logement introuvable</div>;
+  }
 
   return (
     <div className='logement-page'>
-      <SlideShow pictures={currentApartment[0].pictures} numberPhotos={currentApartment[0].pictures.length} />
-      <ApartmentHeader currentApartment={currentApartment[0]} />
+      <SlideShow pictures={currentApartment.pictures} numberPhotos={currentApartment.pictures.length} />
+      <ApartmentHeader currentApartment={currentApartment} />
       <div className='logement__desc__area'>
-        <Collapse title="Description" content={currentApartment[0].description} />
-        <Collapse title="Équipements" content={currentApartment[0].equipments.map((eq, index) => (
+        <Collapse title="Description" content={currentApartment.description} />
+        <Collapse title="Équipements" content={currentApartment.equipments.map((eq, index) => (
           <li key={index}>{eq}</li>
         ))} />
       </div>
@@ -34,4 +32,4 @@ function Logement() {
   );
 }
 
-export default Logement
+export default Logement;

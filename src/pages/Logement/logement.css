@@ -2,21 +2,48 @@
       color: #ff6060;
       font-family: "Montserrat", sans-serif;
       font-weight: normal;
+      
 }
 
 .logement-page h1 {
       font-size: 5rem;
+   
 }
 
 .logement__desc__area {
       display: flex;
-      gap: 4rem;
+      justify-content: space-between;
+      width: 91%
+      ;
+      
 }
 
 /* Mobile */
 @media only screen and (width <= 768px) {
       .logement__desc__area {
             flex-direction: column;
-            gap: 0.3rem;
+            gap:-1%;
+           
       }
+
+      .logement-page h1 {
+      font-size: 5rem;
+      margin-top: 20%;
+   
+}
+
+.apartment__owner {
+      display: flex;
+      gap: 10px;
+      margin-top: 2%;
+      margin-left: 40%;
+      margin-bottom: 2%;
+}
+
+.apartment__owner__details h3 {
+      display: flex;
+    margin-left: 110%;
+   margin-top: 2220px;
+     
+      
 }

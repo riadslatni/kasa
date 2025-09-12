@@ -1,0 +1,91 @@
+.image__banner_img {
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image__container {
+  height: 500px;          
+  max-width: 64%;         
+  
+}
+
+.image__banner_img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image__banner_img .show {
+  opacity: 1;
+}
+
+/* === Flèches === */
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;       /* pas de rond autour */
+  color: white;
+  border: none;
+  font-size: 3rem;        /* taille de l’icône */
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-next {
+  right: 220px;           
+}
+
+.btn-previous {
+  left: 220px; 
+}
+
+.btn:focus {
+  outline: none;        }
+
+
+.slide__counter {
+  position: absolute;
+  width: 100%;
+  color: white;
+  text-align: center;
+  bottom: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .image__container {
+    height: 300px;     
+    width: 95%;
+  }
+
+  .image__banner_img img {
+    height: 300px;
+  }
+
+  .btn {
+    font-size: 2rem;   
+  }
+
+  .btn-previous i {
+  margin-left: -450px;
+  
+}
+
+.btn-next i {
+  margin-right: -450px;
+    
+}
+
+}

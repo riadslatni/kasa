@@ -6,8 +6,8 @@ import About from './pages/About/About.jsx';
 import NotFound from './pages/Errorpages/Errorpages.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Header from './components/Header/Header.jsx';
+import Logement from './pages/Logement/Logement.jsx'; // ✅ ajout ici
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
 
 import './index.css';
 
@@ -18,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/logement/:id" element={<Logement />} /> 
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

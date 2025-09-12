@@ -4,8 +4,6 @@
       display: grid;
       align-items: end;
       background-size: cover;
-      min-width: 200px;
-      min-height: 200px;
       position: relative;
 }
 
@@ -49,8 +47,6 @@
       }
 }
 
-@media only screen and (width <= 480px) {
-      .card__subtitle {
-            font-size: 12px;
-      }
+.cards-conainer{
+      display:flex
 }

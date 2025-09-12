@@ -1,17 +1,5 @@
-import React from 'react';
-import '../Footer.css';
-import footer from '../../assets/logoWhite.png.png'
-
-
-function Footer() {
-  return (
-    <div className='footer'>
-      <div className='footer__logo' >
-            <img src={footer} alt='logo footer' />
-      </div>
-      <p className='footer__text'>© 2020 Kasa. All rights reserved</p>
-    </div>
-  )
+.footer{
+  height: 270
+  px;      /* augmente la hauteur */
+  padding: 2rem 0;    /* ajoute de l’espace intérieur */
 }
-
-export default Footer
