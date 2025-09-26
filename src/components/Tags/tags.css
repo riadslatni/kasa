@@ -1,0 +1,20 @@
+.apartment__tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: -10px;
+}
+
+.apartment__tags span {
+  background-color: #ff6060;
+  color: white;
+  padding: 0.2em 1em;
+  border-radius: 0.5rem;
+  margin-left: 74px;
+}
+
+@media only screen and (width <=768px) {
+  .apartment__tags span {
+    font-size: 14px;
+    text-align: center;
+  }
+}

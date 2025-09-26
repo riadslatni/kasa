@@ -1,45 +1,64 @@
 .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0;
-      gap: 2rem;
-      color: var(--red);
-      font-weight: 400;
-      min-width: 20%;
-      font-style: normal;
-      font-size: 24px;
-      font-family: "Montserrat", sans-serif;
-      margin-left: 82%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  gap: 2rem;
+  color: var(--red);
+  min-width: 20%;
+  font-style: normal;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 30px;
 }
-
 
 
 .navbar a {
-      text-decoration: none;
-
-      color: black;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  font-size: 20px !important;
 }
-
 
 .navbar a.active {
-      text-decoration: underline;
-
+  text-decoration: underline;
 }
 
-@media only screen and (max-width: 768px)
-{
-      .navbar {
-            margin-left: 50%;
-            gap: 1rem;
-      }
+@media only screen and (max-width: 1023px) and (min-width: 769px) {
+  .navbar {
+    font-size: 24px;
+    margin-left: 72%;
+    display: flex;
+    font-size: 20px;
+    gap: 1rem;
+    margin-bottom: -20px;
+    position: relative;
+    top: -82px;
+  }
 }
 .navbar a {
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 500;
-      display: flex;
-      justify-content: center
+  text-transform: uppercase;
+  font-size: px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
 
-     
+@media only screen and (max-width: 768px) {
+  .navbar {
+    font-size: 42px;
+    margin-left: 75%;
+    position: relative;
+    top: -12px;
+    font-size: 20px;
+    gap: 1rem;
+  }
+}
+.navbar a {
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
 }

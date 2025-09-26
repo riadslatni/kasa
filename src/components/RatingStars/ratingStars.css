@@ -1,0 +1,20 @@
+.apartment__owner__stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  color: rgb(220, 220, 220);
+}
+
+.apartment__owner__stars .on {
+  color: #ff6060;
+}
+
+@media only screen and (width <=768px) {
+  .apartment__owner__stars {
+    font-size: 1.7rem;
+    margin-left: -227%;
+    margin-top: -50px;
+    margin-bottom: -20px;
+  }
+}

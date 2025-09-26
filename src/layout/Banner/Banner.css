@@ -11,6 +11,7 @@
       background-size: cover;
       background-image: url("../../assets/banner.png");
       margin-bottom: 2rem;
+      
 }
 
 .banner::before {

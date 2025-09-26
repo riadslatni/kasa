@@ -11,12 +11,29 @@
 }
 
 .logement__desc__area {
+      ;
       display: flex;
       justify-content: space-between;
-      width: 91%
-      ;
+    
+      
       
 }
+
+@media only screen and (width <=1023px) {
+
+      .logement__desc__area {
+            flex-direction: column;
+            gap:-1%;
+           
+      }
+
+     
+
+      .logement-page h1 {
+      font-size: 5rem;
+      margin-top: 20%;
+}
+}  
 
 /* Mobile */
 @media only screen and (width <= 768px) {

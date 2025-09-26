@@ -7,7 +7,9 @@
 
 .error-page div h1 {
       font-size: 15rem;
+
       margin-bottom: 0.5rem;
+      margin-left: 35%;
 }
 
 .error-page div p {
@@ -34,4 +36,5 @@
             text-align: center;
             padding-bottom: 10rem;
       }
+      
 }

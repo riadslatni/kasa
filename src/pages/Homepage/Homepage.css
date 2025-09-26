@@ -13,18 +13,20 @@
 
 .banner-container {
       position: relative;
-      width: 82%;
-      margin-left: 11.5%;
+      width: 80%;
+      margin-left: 12.5%;
       margin-top: 20px;
 }
 
 .banner {
-      width: 93%;
-      margin-left: 15px;
+      width: 94%;
+      margin-left: 1px;
       height: 250px;
       border-radius: 25px;
       object-fit: cover;
       display: block;
+       box-shadow: rgb(149 157 165 / 50%) 0px 8px 24px;
+  filter: brightness(0.5);
 }
 
 .banner-container h1 {
@@ -44,12 +46,13 @@
 
 
 
-.logo {
+.logo img {
       object-fit: cover;
-      margin-right: 20%;
       margin-top: 20px;
       width: 80%;
+      
 }
+      
 
 h1 {
       display: flex;
@@ -71,28 +74,47 @@ h1 {
       background-color: #F6F6F6;
 }
 
-/* Responsive */
-@media only screen and (max-width: 768px) {
-      .cards-container {
-            grid-template-columns: 1fr;
-            width: 90%;
-      }
 
-      .banner-container {
-            width: 95%;
-            height: 20%;
-            margin-left: 2.5%;
-      }
 
-      .home {
-            padding-inline: 0;
-      }
-
-nav.navbar {
-  padding-inline: 1rem;
-  margin-top: -50px; 
-  margin-bottom: 20px;
-
+@media only screen and (max-width: 1023px) (min-width: 769px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem auto;
+  width: 75%;
+  background-color: #F6F6F6;
+  border-radius: 25px;
 }
 
+/* Responsive mobile */
+@media only screen and (max-width: 768px) {
+  .cards-container {
+    display: flex;              /* on écrase le grid */
+    flex-direction: column;     /* en colonne */
+    align-items: center;        /* centrées */
+    background-color: transparent; /* fond transparent */
+    width: 100%;                /* pleine largeur */
+    gap: 1rem;                  /* espace entre les cards */
+  }
+
+  .banner-container {
+    width: 95%;
+    margin: 20px auto;
+    margin-right: 1px;
+  }
+
+  .home {
+    padding-inline: 0;
+  }
+
+  nav.navbar {
+    padding-inline: 1rem;
+    margin-top: -50px; 
+    margin-bottom: 20px;
+  }
 }
